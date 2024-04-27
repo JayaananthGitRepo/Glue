@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ONIXMessage SYSTEM "http://www.editeur.org/onix/3.0/reference/onix-international.dtd">
+<ONIXMessage release="3.0" xmlns="http://www.editeur.org/onix/3.0/reference">
+  <Product>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9781234567890</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <Contributor>
+        <ContributorRole>A01</ContributorRole>
+        <KeyNames>Doe</KeyNames>
+        <NamesBeforeKey>John</NamesBeforeKey>
+        <PersonName>John Doe</PersonName>
+        <PersonNameInverted>Doe, John</PersonNameInverted>
+        <SequenceNumber>1</SequenceNumber>
+        <BiographicalNote>Award-winning author</BiographicalNote>
+      </Contributor>
+      <Contributor>
+        <ContributorRole>A02</ContributorRole>
+        <KeyNames>Smith</KeyNames>
+        <NamesBeforeKey>Jane</NamesBeforeKey>
+        <PersonName>Jane Smith</PersonName>
+        <PersonNameInverted>Smith, Jane</PersonNameInverted>
+        <BiographicalNote>Renowned illustrator</BiographicalNote>
+      </Contributor>
+      <Language>
+        <LanguageCode>eng</LanguageCode>
+        <LanguageRole>1</LanguageRole>
+      </Language>
+      
+    </DescriptiveDetail>
+  </Product>
+  <Product>
+    <!-- Second record goes here -->
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9780987654321</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <Contributor>
+        <ContributorRole>A01</ContributorRole>
+        <KeyNames>Smith</KeyNames>
+        <NamesBeforeKey>Michael</NamesBeforeKey>
+        <PersonName>Michael Smith</PersonName>
+        <PersonNameInverted>Smith, Michael</PersonNameInverted>
+        <SequenceNumber>1</SequenceNumber>
+        <BiographicalNote>Bestselling author</BiographicalNote>
+      </Contributor>
+      <Contributor>
+        <ContributorRole>A02</ContributorRole>
+        <KeyNames>Jones</KeyNames>
+        <NamesBeforeKey>Lisa</NamesBeforeKey>
+        <PersonName>Lisa Jones</PersonName>
+        <PersonNameInverted>Jones, Lisa</PersonNameInverted>
+        <BiographicalNote>Acclaimed illustrator</BiographicalNote>
+      </Contributor>
+      <Language>
+        <LanguageCode>eng</LanguageCode>
+        <LanguageRole>1</LanguageRole>
+      </Language>
+    </DescriptiveDetail>
+  </Product>
+</ONIXMessage>
