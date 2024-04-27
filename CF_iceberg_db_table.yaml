@@ -1,0 +1,61 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Parameters:
+  GlueTargeticebergDatabase:
+    Type: String
+    Default: iceberg_dataplatform
+
+Resources:
+
+  GlueicebergDatabase:
+    Type: AWS::Glue::Database
+    Properties:
+      CatalogId: !Ref AWS::AccountId
+      DatabaseInput:
+        Name: 'iceberg_dataplatform'
+        Description: 'Target Iceberg table type Athena database'
+
+  TableBucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: iiceberg-table-location
+      AccessControl: Private
+      VersioningConfiguration:
+        Status: Enabled
+      Tags:
+        - Key: CreatedBy
+          Value: dataplatform-project
+
+  StudentData:
+    Type: AWS::Glue::Table
+    Properties:
+      CatalogId: !Ref AWS::AccountId
+      DatabaseName: !Ref GlueicebergDatabase
+      TableInput:
+        Name: "student_data"
+        StorageDescriptor:
+          Columns:
+            - Name: "student_id"
+              Type: "string"
+            - Name: "first_name"
+              Type: "string"
+            - Name: "last_name"
+              Type: "string"
+            - Name: "date_of_birth"
+              Type: "string"
+            - Name: "grade_level"
+              Type: "string"
+            - Name: "gpa"
+              Type: "string"
+            - Name: "favorite_subject"
+              Type: "string"
+            - Name: "is_active"
+              Type: "string"
+            - Name: "awards"
+              Type: "string"
+          Location: !Sub "s3://${TableBucket}/table_data/student_data"
+        TableType: "EXTERNAL_TABLE"
+      OpenTableFormatInput:
+        IcebergInput:
+          MetadataOperation: "CREATE"
+          Version: "2"
