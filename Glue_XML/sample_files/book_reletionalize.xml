@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ONIXMessage SYSTEM "http://www.editeur.org/onix/3.0/reference/onix-international.dtd">
+<ONIXMessage release="3.0" xmlns="http://www.editeur.org/onix/3.0/reference">
+  <Product>
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9781234567890</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <Contributor>
+        <ContributorRole>A01</ContributorRole>
+
+        <PersonName>John Doe</PersonName>
+
+      </Contributor>
+      <Contributor>
+        <ContributorRole>A02</ContributorRole>
+
+        <PersonName>Jane Smith</PersonName>
+
+      </Contributor>
+      <Language>
+        <LanguageCode>eng</LanguageCode>
+        <LanguageRole>1</LanguageRole>
+      </Language>
+      <Language>
+        <LanguageCode>spa</LanguageCode>
+        <LanguageRole>2</LanguageRole>
+      </Language>
+    </DescriptiveDetail>
+  </Product>
+  <Product>
+    <!-- Second record goes here -->
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9780987654321</IDValue>
+    </ProductIdentifier>
+    <DescriptiveDetail>
+      <Contributor>
+        <ContributorRole>A01</ContributorRole>
+
+        <PersonName>Michael Smith</PersonName>
+
+      </Contributor>
+      <Language>
+        <LanguageCode>eng</LanguageCode>
+        <LanguageRole>1</LanguageRole>
+      </Language>
+    </DescriptiveDetail>
+  </Product>
+</ONIXMessage>
